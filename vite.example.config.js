@@ -12,6 +12,16 @@ export default defineConfig({
       generateScopedName: "[name]_[local]_[hash:5]", // 生成模块化类名的规则
       hashPrefix: "zen", // hash salt
       globalModulePaths: [], // 不进行模块化的路径
-    }
+    },
+    preprocessorOptions: { // 预处理器配置
+      less: {
+        math: "always",
+        globalVars: { // 全局变量
+          mainColor: "#262626"
+        }
+      },
+      // sass: {}
+    },
+    devSourcemap: true
   }
 })
