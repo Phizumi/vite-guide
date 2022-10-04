@@ -1,7 +1,13 @@
 import { defineConfig } from "vite"
-const postcssPreserEnv = require('postcss-preset-env')
+import path from 'path'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, './src'),
+      "@assets": path.resolve(__dirname, './src/assets')
+    }
+  },
   optimizeDeps: {
     exclude: []
   },
