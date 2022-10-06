@@ -28,5 +28,15 @@ export default defineConfig({
     //     postcssPresetEnv()
     //   ]
     // }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: "[hash].[name].[ext]"
+      }
+    },
+    assetsInlineLimit: 4096, // 4KB
+    outDir: 'dist',
+    assetsDir: 'static'
   }
 })
