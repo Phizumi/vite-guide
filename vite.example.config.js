@@ -22,6 +22,11 @@ export default defineConfig({
       },
       // sass: {}
     },
-    devSourcemap: true
+    devSourcemap: true,
+    // postcss: {
+    //   plugins: [
+    //     postcssPresetEnv()
+    //   ]
+    // }
   }
 })

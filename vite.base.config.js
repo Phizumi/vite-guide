@@ -31,7 +31,7 @@ export default defineConfig({
     devSourcemap: true,
     // postcss: {
     //   plugins: [
-    //     postcssPreserEnv()
+    //     postcssPresetEnv()
     //   ]
     // }
   }
