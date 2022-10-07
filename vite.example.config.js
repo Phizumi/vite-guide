@@ -1,4 +1,5 @@
 import { defineConfig } from "vite"
+import path from "path"
 
 export default defineConfig({
   optimizeDeps: {
@@ -28,6 +29,11 @@ export default defineConfig({
     //     postcssPresetEnv()
     //   ]
     // }
+  },
+  resolve: {
+    alias: {
+      "@": path.resovle(__dirname, './src')
+    }
   },
   build: {
     rollupOptions: {

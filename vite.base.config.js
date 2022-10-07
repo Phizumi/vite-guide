@@ -1,13 +1,8 @@
 import { defineConfig } from "vite"
-import path from 'path'
+// import { ViteAliases } from "vite-aliases"
+import { ViteAliases } from './plugins/ViteAliases'
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, './src'),
-      "@assets": path.resolve(__dirname, './src/assets')
-    }
-  },
   optimizeDeps: {
     exclude: []
   },
@@ -44,5 +39,9 @@ export default defineConfig({
     assetsInlineLimit: 4096, // 4KB
     outDir: 'dist',
     assetsDir: 'static'
-  }
+  },
+  plugins: [
+    ViteAliases()
+    // ViteAliases()
+  ]
 })
