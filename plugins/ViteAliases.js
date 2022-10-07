@@ -7,7 +7,7 @@ const getTotalAlias = (separator = "@", basePath = './') => {
   // src alias
   alias[`${separator}`] = resolve(__dirname, `${basePath}`)
 
-  // src's subdirs alias
+  // src sub-dirs alias
   names.forEach(name => {
     const currentAbsPath = resolve(__dirname, `${basePath}/${name}`)
     const state = statSync(currentAbsPath)
